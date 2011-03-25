@@ -1,0 +1,3 @@
+00:05 <@the_JinX> http://tls.etv.cx/files/0x80000000.bz2
+00:05 <@the_JinX> bunzippen en even regeltje van Juerd ^^ er over
+00:06 <@the_JinX> perl -ane'print pack "H*", join "", @F[1..16]' faalding > binairding
