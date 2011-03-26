@@ -1,0 +1,6 @@
+\Diskonchip\NTX\package\Snd\current\invalid.wav
+0x053b00b0
+0x053b0134 RIFF
+0x053b0138 0x241e0000 -> 2 366 976 (decimal)
+0x053b0147 0x0001 -> WAVE_FORMAT_PCM
+0x053b015c 0x001e0000 -> chunk size, 1 966 080 (decimal) (length of data)
