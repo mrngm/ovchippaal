@@ -1,0 +1,17 @@
+- Memdump
+<%dude> yo
+<%dude> ik was net ff met die geheugendump spelen
+<%dude> volgens mij is dat commando op je site niet helemaal goed :)
+<%dude> ik doe nu dit
+<%dude> tail -n +12 0x80000000 | head -n 10878977 | cut -d' ' -f1-16 | perl -ane'print pack "H*", join "", @F[0..16]' > raw_dump
+<%dude> want het is telnet met wat beginnende crap, en eindigt met nuttelose herhalende crap, en het zit er met adressen, raw bytes en ascii in
+<%dude> 't is gewoon een blok selecteren uit de file dus, en die door de perl concat + pack halen
+<%dude> als je het zonder te knippen perl haalt neemt 'ie ook al die ascii mee de binary in
+<%dude> +door
+<%dude> hij is nog niet helemaal goed zo o_O
+<%dude> ik zag wat html in de gegrepte strings, en die zie ik nu niet meer terug
+<%dude> range moet iig 0..15 zijn, en er gaat dus nog wat mis ;)
+<%dude> misschien dat je het anders moet packen
+<%dude> offsets
+<%dude> dit is de goeie
+<%dude> tail -n +12 0x80000000 | head -n 10878977 | cut -d' ' -f2-17 | perl -ane'print pack "H*", join "", @F[0..15]' > raw_dump
